@@ -1,0 +1,88 @@
+/* Configuraciones base para la página de mascotas */
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 4px solid #1abc9c;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Estilo para el enlace de volver al portafolio */
+a[href="index.html"] {
+    display: inline-block;
+    margin-bottom: 30px;
+    text-decoration: none;
+    color: #1abc9c;
+    font-weight: bold;
+    border: 2px solid #1abc9c;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+a[href="index.html"]:hover {
+    background-color: #1abc9c;
+    color: white;
+}
+
+/* Contenedor principal de la cuadrícula */
+.mis_mascotas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo para cada tarjeta de mascota */
+.mascota {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.mascota:hover {
+    transform: translateY(-10px);
+}
+
+.mascota article {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Estilo de las imágenes */
+.mascota img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Esto evita que las fotos se deformen */
+    border-bottom: 3px solid #f0f2f5;
+}
+
+/* Texto de descripción */
+.mascota p {
+    padding: 15px;
+    font-size: 1.1rem;
+    color: #444;
+    font-style: italic;
+    background-color: #fff;
+    margin: 0;
+}
+
+/* Responsive: Ajuste para pantallas pequeñas */
+@media (max-width: 480px) {
+    .mis_mascotas {
+        grid-template-columns: 1fr;
+    }
+}
